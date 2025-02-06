@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Palace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      .collapse{
+        justify-content: end;
+      }
+      .slide-img{
+        background-image: url('https://bike-palace.netlify.app/images/harley-header.jpg');
+        height: 100vh;
+        background-position: center center;
+        object-fit: contain;
+      }
+      .bg-secondary{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+      }
+      @keyframes scale {
+        100%{
+          transform: scale(1.1);
+        } 
+      }
+      .card>img:hover , .offcanvas-body img:hover{
+        animation: scale 1s ease;
+      }
+      @media  screen and (max-width : 500px) {
+        .container{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+        } 
+      }
+      @media  screen and (min-width : 500px) and (max-width : 900px) {
+        .container{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+        } 
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg px-5">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3" href="#">Bike Palace</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav text-dark ">
+             <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+             <a class="nav-link text-dark" href="#">Features</a>
+             <a class="nav-link text-dark" href="#">Shop</a>
+             <a class="nav-link text-dark" href="#">News</a>
+             <a class="nav-link text-dark" href="#">Contact Us</a> 
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary g-30">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bike Palace</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+      <div class="slide-img">
+        <div class="content d-flex flex-column justify-content-center text-width h-100 mx-5 text-white">
+        <p>
+          "Computer-controlled digital transistorize with electronic advance"
+        </p>
+        <h2>Honda CBR 300R</h2>
+        <p>
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit"
+          <br>
+          "officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."  
+        </p>
+        <button class="btn btn-danger w-25" data-bs-target="#modal" data-bs-toggle="modal" type="button">
+          "purchase"
+          <span class="bi bi-cart-fill"></span>
+        </button>
+        </div>
+      </div>
+      <div class="modal" id="modal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2>Are you sure want to By Harely Davidson??</h2>
+              <h4>Its $23,000</h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaltwo">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modaltwo">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2>Its Processing</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Back to first</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shopping bg-white p-5">
+        <h2 class="text-center p-5 text-dark">Lets Make Some <span class="text-danger"> Shopping</span></h2>
+      </div>
+      <div class="container d-flex justify-content-between">
+      <div class="card mx-4" style="width: 30rem;">
+        <img src="https://bike-palace.netlify.app/images/bike-1.png" class="card-img-top w-80 p-4" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Harley Davidson</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <div class="last d-flex w-100 justify-content-between">
+            <span class="fs-4 fw-bold text-success">$23,000</span>
+            <a href="#" class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Buy Now <span class="bi bi-cart-fill"></span> </a>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+               <div class="offcanvas-header">
+                   <h5 class="offcanvas-title text-danger" id="offcanvasRightLabel">Buying Immediately</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p class="offcanvas-title">Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</p>
+                  <img src="https://bike-palace.netlify.app/images/bike-1.png" class="offcanvas-img-top w-85 p-3" width="380" height="300" alt="...">
+                  <form action="">
+                    <input type="text" placeholder="Enter a Coupon" class="p-2">
+                    <button class="btn btn-danger">Apply Coupon</button>
+                  </form>
+                  <div class="line d-flex flex-column mt-3 ">
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Price</span><span>$23,000</span>
+                    </div>
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Taxes</span><span>$2,000</span>
+                    </div>
+                    <div class="bg-secondary m-3">
+                      <span class="fw-bold">Sub-Total</span><span>$25,000</span>
+                    </div>   
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Total</span><span>$25,000</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-danger m-3" data-bs-target="#modalthree" data-bs-toggle="modal"> Order Now</button>
+                </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mx-4" style="width: 30rem;">
+        <img src="https://bike-palace.netlify.app/images/bike-2.png" class="card-img-top w-80 p-4" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Yamaha MT 15</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <div class="last d-flex w-100 justify-content-between">
+            <span class="fs-4 fw-bold text-success">$23,000</span>
+            <a href="#" class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Buy Now <span class="bi bi-cart-fill"></span></a>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+               <div class="offcanvas-header">
+                   <h5 class="offcanvas-title text-danger" id="offcanvasRightLabel">Buying Immediately</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p class="offcanvas-title">Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</p>
+                  <img src="https://bike-palace.netlify.app/images/bike-1.png" class="offcanvas-img-top w-85 p-3" width="380" height="300" alt="...">
+                  <form action="">
+                    <input type="text" placeholder="Enter a Coupon" class="p-2">
+                    <button class="btn btn-danger">Apply Coupon</button>
+                  </form>
+                  <div class="line d-flex flex-column mt-3 ">
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Price</span><span>$23,000</span>
+                    </div>
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Taxes</span><span>$2,000</span>
+                    </div>
+                    <div class="bg-secondary m-3">
+                      <span class="fw-bold">Sub-Total</span><span>$25,000</span>
+                    </div>   
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Total</span><span>$25,000</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-danger m-3" data-bs-target="#modalthree" data-bs-toggle="modal"> Order Now</button>
+                </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mx-4" style="width: 30rem;">
+        <img src="https://bike-palace.netlify.app/images/bike-3.png" class="card-img-top w-80 p-4" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Yamaha FZ-X</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+          <div class="last d-flex w-100 justify-content-between">
+            <span class="fs-4 fw-bold text-success">$23,000</span>
+            <a href="#" class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Buy Now <span class="bi bi-cart-fill"></span></a>
+          </div>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+               <div class="offcanvas-header">
+                   <h5 class="offcanvas-title text-danger" id="offcanvasRightLabel">Buying Immediately</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p class="offcanvas-title">Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</p>
+                  <img src="https://bike-palace.netlify.app/images/bike-1.png" class="offcanvas-img-top w-85 p-3" width="380" height="300" alt="...">
+                  <form action="">
+                    <input type="text" placeholder="Enter a Coupon" class="p-2">
+                    <button class="btn btn-danger">Apply Coupon</button>
+                  </form>
+                  <div class="line d-flex flex-column mt-3 ">
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Price</span><span>$23,000</span>
+                    </div>
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Taxes</span><span>$2,000</span>
+                    </div>
+                    <div class="bg-secondary m-3">
+                      <span class="fw-bold">Sub-Total</span><span>$25,000</span>
+                    </div>   
+                    <div class="bg-secondary m-3">
+                        <span class="fw-bold">Total</span><span>$25,000</span>
+                    </div>
+                  </div>
+                  <button class="btn btn-danger m-3" data-bs-target="#modalthree" data-bs-toggle="modal"> Order Now</button>
+                </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
